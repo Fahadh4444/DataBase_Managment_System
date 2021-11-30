@@ -14,6 +14,8 @@ app.use(cors());
 
 //* Routes
 app.use("/auth", require("./routes/authRoutes"));
+app.use("/lists", require("./routes/listingRoutes"));
+
 
 app.use((err, req, res, next) => {
   console.log(err.stack);
