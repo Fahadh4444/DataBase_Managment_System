@@ -15,7 +15,8 @@ app.use(cors());
 //* Routes
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/lists", require("./routes/listingRoutes"));
-
+app.use("/chats", require("./routes/chatRoutes"));
+app.use("/participants", require("./routes/participantRoutes"));
 
 app.use((err, req, res, next) => {
   console.log(err.stack);
