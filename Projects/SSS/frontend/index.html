@@ -7,16 +7,17 @@
     <title>SSS</title>
     <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <h1 style="font-size:2.5cm; margin-bottom: 1cm; color: white;">SSS</h1>
+    <div class="glitch" data-text="SSS">SSS</div> 
+    <!-- <h1 id="first">SSS</h1> -->
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#" id="signupf">
                 <h1>Create Account</h1>
                 <span>or use your email for registration</span>
-                <input id="name" type="text" placeholder="Name"/>
+                <input id="name" type="text" placeholder="Username"/>
                 <input id="email" type="email" placeholder="Email"/>
                 <input id="mobile" type="tel" placeholder="Mobile Number"/>
                 <input id="dob" type="text" placeholder="YYYY-MM-DD"/>
@@ -28,7 +29,7 @@
             <form action="#" id="signinf">
                 <h1>Sign in</h1>
                 <span>or use your account</span>
-                <input id="sname" type="text" placeholder="Name" />
+                <input id="sname" type="text" placeholder="Username" />
                 <input id="spassword" type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <button onclick="signin()">Sign In</button>
