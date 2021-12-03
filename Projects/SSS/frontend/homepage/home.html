@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-custom navbar-mainbg" style="margin-top:0;">
+        <!-- <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 0cm;">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profile/profile.html"><i class="far fa-address-book"></i>Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../homepage/listings/mylistings/mylistings.html"><i class="far fa-clone"></i>My Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../homepage/about/about.html"><i class="far fa-calendar-alt"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="signout()"><i class="far fa-chart-bar" id="signouts"></i>Signout</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="title" style="margin-top: 1cm;">Popular Subscription Rooms</h1>
+
+    <div id="app" class="container">
+    <!-- <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop="> -->
+    <!-- <card data-image=""> -->
+    <card data-image="https://i.insider.com/5e0a77defb23d02534281618?width=800&format=jpeg&auto=webp" id="udemy" onclick="room(id)">
+        <h1 slot="header">Udemy</h1>
+        <p slot="content">Udemy, Inc. is an American massive open online course provider aimed at professional adults and students.</p>
+    </card>
+    <!-- <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> -->
+    <card data-image="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/04/coursera-ofrece-gratis-3800-cursos-personas-desempleadas-todo-mundo-1926665.jpg?itok=NJK-5rfz" id="coursera" onclick="room(id)">
+        <h1 slot="header">Coursera</h1>
+        <p slot="content">Coursera Inc. is an American massive open online course provider founded in 2012 by Stanford University.</p>
+    </card>
+    <!-- <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> -->
+    <card data-image="https://thedrum-media.imgix.net/thedrum-prod/s3/news/tmp/10557/netflixa.jpg?w=940&ar=2:1&fit=crop&crop=faces,edges&auto=format&dpr=1" id="netflix" onclick="room(id)">
+        <h1 slot="header">Netflix</h1>
+        <p slot="content">Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies without commercials on an internet-connected device.
+        </p>
+    </card>
+    <!-- <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop="> -->
+    <card data-image="https://sambadenglish.com/wp-content/uploads/2020/12/hotstar-subscripton-1565334122-1.jpg" id="hotstar" onclick="room(id)">    
+        <h1 slot="header">Hotstar</h1>
+        <p slot="content">Hotstar is an Indian brand of subscription video on-demand over-the-top streaming service owned by Star India.</p>
+    </card>
+    <card data-image="https://cbsnews2.cbsistatic.com/hub/i/2021/10/08/238789fe-6e81-46f0-aed2-aee826a37b47/what-is-amazon-prime.jpg" id="prime" onclick="room(id)">    
+        <h1 slot="header">Amazon Prime</h1>
+        <p slot="content">Prime members enjoy unlimited free, fast delivery on eligible items, video streaming, ad-free music, free in-game content, exclusive access to deals & more.
+        </p>
+    </card>
+    <card data-image="https://cdnp1.stackassets.com/68cd115a0b7934e86aff94d56e2b5c7a139e9841/store/opt/596/447/d00cdb2c3f7f2f47e0cb73c2daa75e89de4352cd24eac52a3f3015f71dec/product_31849_product_shots1.jpg" id="curiosity" onclick="room(id)">    
+        <h1 slot="header">Curiosity Stream</h1>
+        <p slot="content">CuriosityStream on Sling TV is a documentary streaming service that carries over 3,000 documentaries, that are factual, credible and with verified information.</p>
+    </card>
+    <card data-image="https://miro.medium.com/max/1400/1*CiGDRIpto0IasvPMsxV47g.png" id="udacity" onclick="room(id)">    
+        <h1 slot="header">Udacity</h1>
+        <p slot="content">Udacity is an online learning platform for those interested in tech-related subjects such as data analysis, software engineering, artificial intelligence and web development.
+        </p>
+    </card>
+    </div>
+    <div id="more"><a href="./listings/listings.html">More Listings</a></div>
+    <script src="script.js"></script>
+</body>
+</html>
