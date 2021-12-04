@@ -55,6 +55,7 @@ jQuery(document).ready(function($){
 	target.parent().addClass('active');
 });
 
+//* To Get users details and token from local Storage
 const isAuthenticated = () => {
     if (typeof window == "undefined") {
         return false
@@ -66,6 +67,7 @@ const isAuthenticated = () => {
     }
 }
 
+//* Insert listings
 function insertLists(res){
     const n = 500
     const req = document.getElementById('req');
@@ -96,6 +98,7 @@ function insertLists(res){
     }
 }
 
+//* TO GEt All Listings
 function getAllListings(f){
     let r = []
     const { user, token } = isAuthenticated();
@@ -121,22 +124,7 @@ function getAllListings(f){
     return r;
 }
 
-
-// function final(l_id, u_id, token){
-
-//     fetch(`http://localhost:3000/participants/get/${l_id}`, {
-//           method: "GET",
-//           headers: {
-//             Authorization: `Bearer ${token}`
-//         },
-//     })
-//     .then((res) => res.json())
-//     .then((res) => {
-//         console.log(res);
-//     })
-//     .catch((err) => console.log(err))
-// }
-
+//* Accept Listings
 function accept(id) {
     console.log(id);
     const { user, token } = isAuthenticated();
@@ -172,7 +160,7 @@ function accept(id) {
     getAllListings();
 }
 
-
+//* Insert Searched listings
 function insertSLists(res, cat){
     const req = document.getElementById('req');
     req.innerHTML = "<br>";
@@ -206,8 +194,7 @@ function insertSLists(res, cat){
     }
 }
 
-
-
+//* When Searched For Listings
 function search(e){
     if(event.keyCode === 13){
         getAllListings(1);

@@ -135,7 +135,7 @@ jQuery(document).ready(function($){
 
 const signouts = document.getElementById('signouts');
 
-
+//* Signout function to to manage signout functionalities
 function signout(){
   if (typeof window !== "undefined") {
       localStorage.removeItem("jwt");
@@ -151,6 +151,7 @@ function signout(){
   }
 }
 
+//* room function to redirect pages
 function room(id){
   const e = document.getElementById(`${id}`);
   e.onclick = () => {

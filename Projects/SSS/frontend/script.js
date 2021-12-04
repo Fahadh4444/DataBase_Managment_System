@@ -12,6 +12,7 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
+//* Signup function to to manage signup functionalities
 function signup() {
     username = $('#name').val();
     email = $('#email').val();
@@ -58,7 +59,7 @@ function authenticate(){
     }
 }
 
-
+//* Signin function to to manage signin functionalities
 function signin() {
     username = $('#sname').val();
     password = $('#spassword').val();
